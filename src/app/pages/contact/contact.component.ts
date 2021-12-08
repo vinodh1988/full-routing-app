@@ -11,10 +11,20 @@ export class ContactComponent implements OnInit {
   constructor(private cs:ContactsService) { }
   contacts:any;
   ngOnInit(): void {
+    /*
      this.cs.getContacts().subscribe(
        (data:any)=>this.contacts=data,
        (error)=>this.contacts=[]
      )
-  }
+  }*/
+
+      this.cs.getContacts().subscribe(
+        {
+          next: (data:any)=>this.contacts=data,
+          error: (error)=>this.contacts=[]
+        }
+      )
+
+  }  
 
 }
