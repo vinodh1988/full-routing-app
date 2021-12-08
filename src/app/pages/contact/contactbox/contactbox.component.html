@@ -1,0 +1,13 @@
+<div class="card" 
+[ngStyle]="{float: 'left' ,width: '300px',height:'400px',margin:'20px'}">
+ <img class="card-img-top" src="http://localhost:8090/{{contact.image}}" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">{{contact.title}}</h4>
+    <p class="card-text">
+        Address: {{contact.address}}<br/>
+        {{contact.city}}<br/>
+        {{contact.pin}}
+    </p>
+    <a href="#" class="btn btn-primary">See Details</a>
+  </div>
+</div>
