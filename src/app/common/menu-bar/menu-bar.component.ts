@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LogGuard } from 'src/app/Guards/log.guard';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -12,7 +13,7 @@ password:string="";
 error:string="";
 status:boolean=false;
 menutext:any="Login"
-  constructor(private ls:LoginService) { }
+  constructor(private ls:LoginService,public lg:LogGuard) { }
 
   ngOnInit():void {
       if(this.ls.getStatus()){
