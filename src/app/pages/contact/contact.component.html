@@ -1,2 +1,7 @@
 <h3>Our Offices</h3>
+<div *ngIf="status">
 <app-contactbox *ngFor="let x of contacts" [contact]="x"></app-contactbox>
+</div>
+<div class="alert alert-danger" *ngIf="!status">
+    You need to login to view these details
+</div>
